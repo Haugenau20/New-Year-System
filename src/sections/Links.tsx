@@ -49,6 +49,17 @@ export default function Links() {
             will show no data. The GitHub repo is the best place to see how it works.
           </p>
         </div>
+
+        {/* Scope / limitations — honest portfolio framing */}
+        <div className="links__scope">
+          <p className="links__scope-heading">Scope</p>
+          <p className="links__scope-text">
+            Built as a portfolio and inspiration piece — not a plug-and-play product. It's wired to
+            one specific home: hardcoded to my speakers and two Spotify accounts (two, because Spotify
+            won't play different songs on separate speakers from a single account), and Spotify-only
+            with no support for other music services.
+          </p>
+        </div>
       </div>
 
       {/* Footer back-link */}

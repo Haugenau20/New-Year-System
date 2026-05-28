@@ -97,6 +97,30 @@
   font-style: italic;
 }
 
+/* ---- Scope / limitations note ---- */
+.links__scope {
+  margin-top: var(--space-2);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-1);
+}
+
+.links__scope-heading {
+  font-family: var(--font-display);
+  font-size: var(--fs-small);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  margin-bottom: var(--space-1);
+}
+
+.links__scope-text {
+  font-size: var(--fs-small);
+  color: var(--text-2);
+  line-height: var(--lh-body);
+}
+
 /* ---- Portfolio back-link ---- */
 .links__footer {
   margin-top: var(--space-5);
