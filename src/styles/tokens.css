@@ -1,0 +1,60 @@
+:root {
+  /* ---- Color: dark, midnight-atmospheric ---- */
+  --bg-0: #0a0a12;          /* page base (near-black, blue-shifted) */
+  --bg-1: #12121f;          /* raised surface / gradient top */
+  --bg-2: #181826;          /* cards / panels */
+  --bg-3: #20202f;          /* hover / borders-from-fill */
+
+  --line: rgba(255, 255, 255, 0.08);     /* hairline borders */
+  --line-strong: rgba(255, 255, 255, 0.16);
+
+  --text-0: #e8e8f0;        /* primary text */
+  --text-1: #b6b6c8;        /* secondary */
+  --text-2: #8a8aa0;        /* muted / captions */
+
+  /* Accents */
+  --blue: #60a5fa;          /* electric blue — primary accent */
+  --blue-strong: #3b82f6;
+  --blue-glow: rgba(96, 165, 250, 0.35);
+  --gold: #f5c84c;          /* midnight / celebration highlight */
+  --gold-soft: #f3d27a;
+  --gold-glow: rgba(245, 200, 76, 0.30);
+
+  /* ---- Typography ---- */
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --fs-hero: clamp(2.75rem, 7vw, 5.5rem);
+  --fs-h2: clamp(1.9rem, 4vw, 3rem);
+  --fs-h3: clamp(1.25rem, 2vw, 1.6rem);
+  --fs-lead: clamp(1.1rem, 1.6vw, 1.35rem);
+  --fs-body: 1.05rem;
+  --fs-small: 0.9rem;
+
+  --lh-tight: 1.1;
+  --lh-snug: 1.3;
+  --lh-body: 1.65;
+
+  /* ---- Spacing / layout ---- */
+  --maxw: 1100px;
+  --maxw-narrow: 760px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --section-pad: clamp(4.5rem, 10vw, 9rem);
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4.5rem;
+
+  /* ---- Radius / shadow / motion ---- */
+  --radius: 14px;
+  --radius-sm: 8px;
+  --shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.6);
+  --shadow-glow-blue: 0 0 40px -8px var(--blue-glow);
+  --shadow-glow-gold: 0 0 40px -8px var(--gold-glow);
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 600ms;
+}
