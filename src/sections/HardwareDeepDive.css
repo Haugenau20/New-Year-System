@@ -1,0 +1,108 @@
+.hw__lead {
+  font-size: var(--fs-lead);
+  color: var(--text-1);
+  line-height: var(--lh-body);
+  margin-bottom: var(--space-5);
+  max-width: 72ch;
+}
+
+/* ---- Spec card grid ---- */
+.hw__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.hw__card {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--space-3) var(--space-3) var(--space-4);
+  box-shadow: var(--shadow);
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease),
+    border-color var(--dur) var(--ease);
+}
+
+.hw__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow), var(--shadow-glow-blue);
+  border-color: var(--line-strong);
+}
+
+.hw__card-name {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--blue);
+  margin-bottom: var(--space-2);
+  line-height: var(--lh-snug);
+}
+
+.hw__card-detail {
+  font-size: var(--fs-body);
+  color: var(--text-1);
+  line-height: var(--lh-body);
+}
+
+/* ---- Layout: grid + photo side by side on desktop ---- */
+.hw__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+@media (min-width: 860px) {
+  .hw__content {
+    grid-template-columns: 1fr 280px;
+    align-items: start;
+  }
+}
+
+/* ---- Battery callout ---- */
+.hw__power {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius);
+  padding: var(--space-3) var(--space-4);
+  box-shadow: var(--shadow-glow-gold);
+  margin-top: var(--space-5);
+}
+
+.hw__power-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 0.1rem;
+}
+
+.hw__power-label {
+  font-family: var(--font-display);
+  font-size: var(--fs-small);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: var(--space-1);
+}
+
+.hw__power-text {
+  font-size: var(--fs-body);
+  color: var(--text-1);
+  line-height: var(--lh-body);
+}
+
+/* ---- Build photo column ---- */
+.hw__photo {
+  position: sticky;
+  top: var(--space-4);
+}
+
+@media (max-width: 859px) {
+  .hw__photo {
+    position: static;
+  }
+}

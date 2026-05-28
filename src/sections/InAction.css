@@ -1,0 +1,42 @@
+.gallery__lead {
+  font-size: var(--fs-lead);
+  color: var(--text-1);
+  line-height: var(--lh-body);
+  margin-bottom: var(--space-5);
+  max-width: 72ch;
+}
+
+/* ---- Responsive auto-fit grid ---- */
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-3);
+  align-items: start;
+}
+
+/* Wide item: the 16/9 dashboard screenshot spans full width when room allows */
+.gallery__tile--wide {
+  grid-column: 1 / -1;
+}
+
+/* ---- Tile wrapper: applies hover glow around the MediaFrame figure ---- */
+.gallery__tile {
+  border-radius: var(--radius);
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+
+.gallery__tile:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow-blue);
+}
+
+/* On very small screens collapse to a single column */
+@media (max-width: 480px) {
+  .gallery__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery__tile--wide {
+    grid-column: auto;
+  }
+}

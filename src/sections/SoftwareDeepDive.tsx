@@ -1,23 +1,33 @@
 import Section from '../components/Section'
 import { software } from '../content/site'
+import './SoftwareDeepDive.css'
 
-// STUB — to be implemented: two-column layout (HA layer + dashboard).
 export default function SoftwareDeepDive() {
   return (
     <Section id="software" eyebrow="Software" title="The automation & dashboard layer">
-      <p style={{ color: 'var(--text-1)', marginBottom: 'var(--space-4)' }}>{software.intro}</p>
-      <h3 style={{ fontSize: 'var(--fs-h3)' }}>{software.homeAssistant.title}</h3>
-      <ul style={{ color: 'var(--text-1)' }}>
-        {software.homeAssistant.points.map((p) => (
-          <li key={p}>{p}</li>
-        ))}
-      </ul>
-      <h3 style={{ fontSize: 'var(--fs-h3)', marginTop: 'var(--space-4)' }}>{software.dashboard.title}</h3>
-      <ul style={{ color: 'var(--text-1)' }}>
-        {software.dashboard.points.map((p) => (
-          <li key={p}>{p}</li>
-        ))}
-      </ul>
+      <p className="sw__lead">{software.intro}</p>
+
+      <div className="sw__columns">
+        {/* Home Assistant layer — blue accent */}
+        <div className="sw__block sw__block--ha">
+          <h3 className="sw__block-title">{software.homeAssistant.title}</h3>
+          <ul className="sw__block-list">
+            {software.homeAssistant.points.map((point) => (
+              <li key={point}>{point}</li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Dashboard layer — gold accent */}
+        <div className="sw__block sw__block--dashboard">
+          <h3 className="sw__block-title">{software.dashboard.title}</h3>
+          <ul className="sw__block-list">
+            {software.dashboard.points.map((point) => (
+              <li key={point}>{point}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </Section>
   )
 }
