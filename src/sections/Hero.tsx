@@ -119,6 +119,7 @@ export default function Hero() {
         {/* ---- NFC tap visual ---- */}
         <div className="hero__media">
           <MediaFrame
+            src="media/song_tap.gif"
             alt={hero.nfcGifAlt}
             placeholderLabel="NFC tap GIF"
             ratio="4 / 3"
