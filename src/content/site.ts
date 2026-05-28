@@ -74,8 +74,7 @@ export const software = {
     points: [
       'Room-aware tag handling: a kitchen tap brings the song on right away, while a living-room tap adds it to a shared queue — capped at three songs with no duplicates, tracked through a Home Assistant helper updated on every tap.',
       'That “instant” kitchen playback is really a controlled inject — the song is queued and the player skips to it after a delay too short to notice, then resumes the original playlist where it left off.',
-      'Spotcast initiates Spotify playback and targets the right speaker.',
-      'SpotifyPlus exposes the Spotify Web API for advanced controls.',
+      'SpotifyPlus drives playback through the Spotify Web API — starting tracks, targeting the right speaker, and handling the queue and advanced controls.',
       'Lighting is kitchen-only: the lights shift with each playlist’s mood (energetic or relaxed). The living-room scene lives entirely on the Home Assistant side and never reacts to song changes.',
       'Admin cards reset the queue, override the room rules, start and stop playback, adjust lighting, and allow on-the-fly debugging.',
     ],
