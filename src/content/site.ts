@@ -68,14 +68,15 @@ export const hardware = {
 
 export const software = {
   intro:
-    'Two software layers sit above the hardware: the Home Assistant automation layer that turns tag events into actions, and the React dashboard that put the live state on the TV.',
+    'Two software layers sit above the hardware. The Home Assistant automation layer turns tag events into music and lighting; the React dashboard mirrors what’s playing on the TV. They’re intentionally independent — kept in separate repositories — so the party runs perfectly even if the dashboard never starts.',
   homeAssistant: {
     title: 'Home Assistant automation layer',
     points: [
-      'Room-aware tag handling: kitchen taps play immediately, while living-room taps add to a shared queue capped at three songs with no duplicates.',
+      'Room-aware tag handling: a kitchen tap brings the song on right away, while a living-room tap adds it to a shared queue — capped at three songs with no duplicates, tracked through a Home Assistant helper updated on every tap.',
+      'That “instant” kitchen playback is really a controlled inject — the song is queued and the player skips to it after a delay too short to notice, then resumes the original playlist where it left off.',
       'Spotcast initiates Spotify playback and targets the right speaker.',
       'SpotifyPlus exposes the Spotify Web API for advanced controls.',
-      'Lighting follows the room — kitchen lights shift with each playlist’s mood (energetic or relaxed), while the living room runs a slow, time-based colour cycle.',
+      'Lighting is kitchen-only: the lights shift with each playlist’s mood (energetic or relaxed). The living-room scene lives entirely on the Home Assistant side and never reacts to song changes.',
       'Admin cards reset the queue, override the room rules, start and stop playback, adjust lighting, and allow on-the-fly debugging.',
     ],
   },
@@ -86,7 +87,7 @@ export const software = {
       'Cloud Functions handle the Spotify OAuth 2.0 token exchange.',
       'Adaptive Spotify polling: 3s → 5s → 10s with automatic backoff on rate limits.',
       'Large album art tuned for a 1920×1080 TV, shown via Chromecast with Google TV in kiosk mode.',
-      'Recognises the ~60 personal song cards mapped to NFC tags and mirrors live queue feedback from both readers via the Home Assistant API.',
+      'Highlights only the ~60 personal “favourite” song cards as they surface in the Spotify queue — ordinary playlist tracks are left unmarked.',
       'Midnight + Kongens Tale countdowns, with pre-rendered WebGL backgrounds served as MP4 and a 5-minute hue-shifting rotation.',
     ],
   },
