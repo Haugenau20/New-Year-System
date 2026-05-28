@@ -1,0 +1,63 @@
+/* ---- SystemOverview section styles ---- */
+
+.sysoverview__lead {
+  font-size: var(--fs-lead);
+  color: var(--text-1);
+  line-height: var(--lh-body);
+  margin-bottom: var(--space-4);
+}
+
+/* Pull-quote callout for the "no logic in firmware" architectural point */
+.sysoverview__callout {
+  position: relative;
+  margin-bottom: var(--space-5);
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow), inset 0 0 40px -20px var(--gold-glow);
+}
+
+.sysoverview__callout-icon {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--gold);
+  margin-bottom: var(--space-1);
+  user-select: none;
+}
+
+.sysoverview__callout-text {
+  font-family: var(--font-display);
+  font-size: var(--fs-body);
+  font-weight: 500;
+  color: var(--text-0);
+  line-height: var(--lh-snug);
+}
+
+.sysoverview__callout-text strong {
+  color: var(--gold-soft);
+  font-weight: 700;
+}
+
+.sysoverview__callout-sub {
+  margin-top: var(--space-1);
+  font-size: var(--fs-small);
+  color: var(--text-2);
+  line-height: var(--lh-body);
+}
+
+/* Diagram wrapper — break out of narrow column so diagram has breathing room */
+.sysoverview__diagram-wrap {
+  /* Intentionally wider than the narrow prose column */
+  margin-inline: calc(-1 * var(--gutter));
+  padding-inline: var(--gutter);
+}
+
+@media (max-width: 759px) {
+  .sysoverview__callout {
+    padding: var(--space-2) var(--space-3);
+  }
+}

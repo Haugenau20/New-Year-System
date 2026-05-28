@@ -1,0 +1,142 @@
+/* ---- SystemDiagram: connected flow nodes ---- */
+
+.sysdiagram {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0;
+  width: 100%;
+  margin-top: var(--space-5);
+  overflow-x: auto;
+  padding-bottom: var(--space-1); /* room for scrollbar if needed */
+}
+
+/* Each item = node + connector */
+.sysdiagram__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.sysdiagram__node {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-3) var(--space-2);
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--blue-strong);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+  min-width: 0;
+}
+
+.sysdiagram__node:hover {
+  border-top-color: var(--blue);
+  box-shadow: var(--shadow), var(--shadow-glow-blue);
+}
+
+/* Gold treatment on the final (output) node */
+.sysdiagram__node--gold {
+  border-top-color: var(--gold);
+}
+
+.sysdiagram__node--gold:hover {
+  border-top-color: var(--gold-soft);
+  box-shadow: var(--shadow), var(--shadow-glow-gold);
+}
+
+.sysdiagram__node--gold .sysdiagram__label {
+  color: var(--gold-soft);
+}
+
+.sysdiagram__label {
+  font-family: var(--font-display);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--blue);
+  line-height: var(--lh-snug);
+  letter-spacing: 0.01em;
+}
+
+.sysdiagram__detail {
+  font-size: 0.82rem;
+  color: var(--text-2);
+  line-height: var(--lh-body);
+}
+
+/* Connector between nodes */
+.sysdiagram__connector {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 4px;
+  color: var(--blue-strong);
+}
+
+.sysdiagram__arrow {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* On desktop: show horizontal arrows, hide vertical */
+.sysdiagram__arrow-v {
+  display: none;
+}
+
+.sysdiagram__arrow-h {
+  display: block;
+}
+
+/* ---- Mobile: vertical stack ---- */
+@media (max-width: 759px) {
+  .sysdiagram {
+    flex-direction: column;
+    overflow-x: visible;
+    padding-bottom: 0;
+  }
+
+  .sysdiagram__item {
+    flex-direction: column;
+    align-items: stretch;
+    flex: none;
+  }
+
+  .sysdiagram__node {
+    border-top: 1px solid var(--line);
+    border-left: 2px solid var(--blue-strong);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .sysdiagram__node--gold {
+    border-left-color: var(--gold);
+  }
+
+  .sysdiagram__connector {
+    padding-block: 4px;
+    padding-inline: 0;
+    align-self: flex-start;
+    margin-left: var(--space-3);
+  }
+
+  .sysdiagram__arrow {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Show vertical arrows, hide horizontal */
+  .sysdiagram__arrow-h {
+    display: none;
+  }
+
+  .sysdiagram__arrow-v {
+    display: block;
+  }
+}
