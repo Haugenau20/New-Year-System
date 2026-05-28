@@ -13,10 +13,10 @@ export default function SystemOverview() {
         <span className="sysoverview__callout-icon" aria-hidden="true">✦</span>
         <p className="sysoverview__callout-text">
           <strong>No business logic on the device.</strong>{' '}
-          The ESP32 firmware only emits tag events — every playlist assignment and automation lives in Home Assistant.
+          The firmware only emits tag events; what each card actually does is defined entirely in Home Assistant.
         </p>
         <p className="sysoverview__callout-sub">
-          This means tags can be reassigned to any playlist or scene without ever reflashing the hardware.
+          So a card can be reassigned to a different song or playlist without ever reflashing the hardware.
         </p>
       </aside>
 
