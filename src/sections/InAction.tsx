@@ -8,19 +8,17 @@ export default function InAction() {
     <Section id="in-action" eyebrow="In Action" title="New Year's Eve, live">
       <p className="gallery__lead">{inAction.intro}</p>
       <div className="gallery__grid">
-        {inAction.gallery.map((item) => {
-          const isWide = item.ratio === '16 / 9'
-          return (
-            <MediaFrame
-              key={item.caption}
-              alt={item.caption}
-              caption={item.caption}
-              ratio={item.ratio}
-              placeholderLabel="Photo / clip"
-              className={`gallery__tile${isWide ? ' gallery__tile--wide' : ''}`}
-            />
-          )
-        })}
+        {inAction.gallery.map((item) => (
+          <MediaFrame
+            key={item.caption}
+            src={item.src}
+            alt={item.caption}
+            caption={item.caption}
+            ratio={item.ratio}
+            placeholderLabel="Photo / clip"
+            className="gallery__tile"
+          />
+        ))}
       </div>
     </Section>
   )
