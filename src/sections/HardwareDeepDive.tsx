@@ -33,6 +33,7 @@ export default function HardwareDeepDive() {
         {/* Build photo placeholder */}
         <div className="hw__photo">
           <MediaFrame
+            src="media/both_device_inside.jpg"
             alt="Physical build of the NFC controller hardware"
             ratio="4 / 3"
             placeholderLabel="Build photo"

@@ -95,11 +95,10 @@ export const software = {
 export const inAction = {
   intro:
     'Deployed live on New Year’s Eve for 12 guests across two rooms. Photos and clips from the night:',
-  // Captions describe the intended media; real assets drop into /public/media later.
   gallery: [
-    { caption: 'Living-room controller — tap a song card to add it to the queue', ratio: '4 / 3' },
-    { caption: 'Kitchen controller with the physical pause button', ratio: '4 / 3' },
-    { caption: 'The dashboard on the TV via Chromecast (kiosk mode)', ratio: '16 / 9' },
-    { caption: 'The card deck — playlists, personal song cards, and admin cards', ratio: '4 / 3' },
+    { caption: 'A guest tapping a song card on the controller', src: 'media/song_tap.gif', ratio: '4 / 3' },
+    { caption: 'Living-room controller (Device 1) — inside the build', src: 'media/device_1_inside_close_up.jpg', ratio: '4 / 3' },
+    { caption: 'Kitchen controller (Device 2) — inside, with the pause button', src: 'media/device_2_inside.jpg', ratio: '4 / 3' },
+    { caption: 'The card deck — playlists, personal song cards, and admin cards', src: 'media/both_device_plus_cards.jpg', ratio: '4 / 3' },
   ],
 } as const
